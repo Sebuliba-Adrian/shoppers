@@ -1,0 +1,14 @@
+
+form {
+ 
+    margin-top: 20px;
+
+}
+button{
+    /* margin-left: 70%; */
+    display: inline-block
+}
+
+button:first-child{
+     margin-left: 50%;
+}
