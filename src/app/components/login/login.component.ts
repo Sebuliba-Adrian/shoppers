@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../../entities/User';
 import { TokenService } from '../../services/token.service';
-import { AuthSingletonService } from '../../services/auth-singleton.service';
 
 @Component({
   selector: 'app-login',

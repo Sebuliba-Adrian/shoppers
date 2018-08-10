@@ -21,8 +21,6 @@ import { NavigateAwayGuardService } from './services/navigate-away-guard.service
 import { CategoriesResolverService } from './services/categories-resolver.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AuthGuardService } from './services/auth-guard.service';
-import { AuthSingletonService } from './services/auth-singleton.service';
-
 
 @NgModule({
   declarations: [
@@ -50,7 +48,6 @@ import { AuthSingletonService } from './services/auth-singleton.service';
     NavigateAwayGuardService,
     CategoriesResolverService,
     AuthGuardService,
-    AuthSingletonService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true, }
   ],
   bootstrap: [AppComponent]

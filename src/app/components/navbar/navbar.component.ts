@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthSingletonService } from '../../services/auth-singleton.service';
 import { Router } from '../../../../node_modules/@angular/router';
 import { TokenService } from '../../services/token.service';
 
