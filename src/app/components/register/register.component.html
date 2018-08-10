@@ -2,52 +2,36 @@
   <div class="card">
     <div class="card-header">Register Here</div>
     <div class="card-body">
-      <form #signupForm=ngForm (ngSubmit)="onSubmit()">
+      <form>
         <div class="form-group row">
           <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" name="name" class="form-control" id="inputname3" placeholder="Name"  required>
-            <div class="alert alert-danger" [hidden]="!error.name">
-              {{error.name}}
-            </div>
+            <input type="text" name="name" class="form-control" id="inputname3" placeholder="Name" [(ngModel)]="model.name" required />
+            
           </div>
         </div>
 
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email"  required>
-            <div class="alert alert-danger" [hidden]="!error.email">
-              {{error.email}}
-            </div>
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="model.email" required />
           </div>
         </div>
 
         <div class="form-group row">
-          <label for="inputPasswordConfirmation3" class="col-sm-2 col-form-label">Password</label>
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
           <div class="col-sm-10">
-            <input type="password" name="password" class="form-control" id="inputPasswordConfirmation3" placeholder="Confirm Password"
-              required>
-            <div class="alert alert-danger" [hidden]="!error.password">
-              {{error.password}}
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
-          <div class="col-sm-10">
-            <input type="password" name="password_confirmation" class="form-control" id="inputPassword3" placeholder="Password" 
-              required>
+            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password"
+              [(ngModel)]="model.password" required />
           </div>
         </div>
 
         <div class="form-group row">
           <div class="col-sm-10 offset-2">
 
-            <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Sign Up</button>
+            <button type="submit" class="btn btn-primary" (click)="submitHandler()">Sign Up</button>
 
-            <a routerLink="/login" class="btn btn-info float-right">Sign in</a>
+            <a [routerLink]="['/login']" class="btn btn-info float-right">Sign in</a>
 
           </div>
         </div>
