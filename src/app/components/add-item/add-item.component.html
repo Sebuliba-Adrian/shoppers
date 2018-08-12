@@ -2,20 +2,20 @@
   <div class="form-group row">
     <label for="nameId" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="nameId" placeholder="Name">
+      <input type="text" name= "name" class="form-control" id="nameId"[(ngModel)]="model.name" placeholder="Name" />
     </div>
   </div>
   <div class="form-group row">
     <label for="descId" class="col-sm-2 col-form-label">Description</label>
     <div class="col-sm-10">
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea class="form-control" name= "descripion" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="model.description" wrap="hard"></textarea>
     </div>
   </div>
 
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Back</button>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary"   [routerLink] = "['/categories',categoryId$]">Back</button>
+      <button type="submit" class="btn btn-primary" (click)="addItem()">Submit</button>
     </div>
   </div>
 </form>

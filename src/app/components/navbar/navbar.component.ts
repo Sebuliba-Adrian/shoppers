@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '../../../../node_modules/@angular/router';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router,
+    private _token: TokenService) { }
 
   ngOnInit() {
+  }
+
+  logout(event: MouseEvent) {
+    event.preventDefault();
+    this._token.remove();
+    this._router.navigateByUrl('/login');
+  }
+
+  isloggedIn() {
+    return !!localStorage.getItem('token');
   }
 
 }

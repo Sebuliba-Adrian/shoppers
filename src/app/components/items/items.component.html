@@ -1,43 +1,28 @@
 <h1 class="pull-xs-left">
   Your Shopping Lists Items
 </h1>
-<div class="pull-xs-right">
-  <a class="btn btn-primary" href="#" role="button">
+<div>
+  <button type="submit" class="btn btn-primary" (click)="goToCategories()">Back</button>
+  <button class="btn btn-primary float-right" (click)="onClick()" role="button">
     New Item +
-  </a>
+  </button>
 </div>
 
 <div class="clearfix">
 </div>
 <br>
 <div class="row">
-  <div class="col-sm-4">
+  <div *ngFor="let item of items" class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Delete</a>
+        <h5 class="card-title">{{ item.name}}</h5>
+        <p class="card-text">{{ item.description}}</p>
+      </div>
+      <div class="card-footer">
+        <a (click)="deleteItem(item.id)" class="btn btn-danger">Delete</a>
         <a href="#" class="btn btn-primary">Edit</a>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Delete</a>
-        <a href="#" class="btn btn-primary">Edit</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Delete</a> <a href="#" class="btn btn-primary">Edit</a>
-      </div>
-    </div>
-  </div>
+
 </div>
