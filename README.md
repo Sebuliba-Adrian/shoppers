@@ -1,5 +1,7 @@
 # ShoppersFront
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/36af21364333492d98eb5cd6f201b0cf)](https://app.codacy.com/app/Sebuliba-Adrian/shoppers?utm_source=github.com&utm_medium=referral&utm_content=Sebuliba-Adrian/shoppers&utm_campaign=badger)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
